@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+
+    <style>
+      /* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    background-color: black;
+    overflow-x: hidden;
+}
+
+/* Navigation Bar */
+nav {
+    background: rgba(50, 50, 50, 0.8);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    color: #d3d3d3;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #00bfff;
+}
+
+        /* About Page Styles */
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Fullscreen layout */
+    padding: 2rem;
+    text-align: center;
+    color: white;
+}
+
+.about-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #00bfff; /* Accent color */
+    text-shadow: 0 0 15px #00eaff;
+}
+
+        /* Projects Page Styles */
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    min-height: 100vh;
+    color: white;
+    text-align: center;
+}
+
+.projects-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #00bfff; /* Accent color */
+}
+
+.project-gallery {
+    display: flex;
+    flex-wrap: wrap; /* Enables wrapping for responsiveness */
+    justify-content: center; /* Centers items horizontally */
+    gap: 1.5rem; /* Adds space between items */
+    max-width: 1200px; /* Limits the gallery width */
+    margin: 0 auto;
+}
+
+.project-item {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping of items */
+    gap: 1rem; /* Space between items */
+    justify-content: center;
+    margin: 2rem auto;
+    max-width: 90%;
+}
+
+.project-item img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover; /* Ensures images/videos fit neatly */
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Enhanced shadow */
+}
+
+.project-item img:hover {
+    transform: scale(1.1); /* Image zoom effect */
+}
+
+.project-item .project-title {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    color: white;
+    font-size: 1rem;
+    padding: 0.5rem;
+    text-align: center;
+    border-radius: 5px;
+}
+
+/* Background Animation */
+@keyframes floatSquares {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(-100%);
+    }
+}
+
+.square-bg {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #bfbfbf;
+    animation: floatSquares 10s linear infinite;
+    opacity: 0.3;
+}
+
+.square-bg:nth-child(odd) {
+    background: #00bfff;
+    width: 30px;
+    height: 30px;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .project-item {
+        width: 45%; /* Adjust size for smaller screens */
+        height: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-item {
+        width: 100%; /* Stack items vertically on small screens */
+        height: 150px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="bg-animation"></div>
+    <nav>
+        <a href="indexjay.html">Home</a>
+        <a href="aboutjay.html">About Me</a>
+        <a href="projectjay.html">Projects</a>
+        <a href="servicejay.html">Services</a>
+        <a href="contactjay.html">Contact Me</a>
+    </nav>
+    <div class="projects-container">
+        <h1>My Projects</h1>
+        <div class="project-gallery">
+            <!-- Project Item -->
+            <div class="project-item">
+                <img src="kenn.jpg" alt="Project 1">
+            </div>
+            <div class="project-item">
+                <img src="kenn.jpg" alt="Project 2">
+            </div>
+            <div class="project-item">
+                <img src="kenn.jpg" alt="Project 3">
+            </div>
+            <div class="project-item">
+                <img src="kenn.jpg" alt="Project 4">
+            </div>
+            <div class="project-item">
+                <img src="kenn.jpg" alt="Project 5">
+            </div>
+            <div class="project-item">
+                <img src="kenn.jpg" alt="Project 6">
+            </div>
+            <div class="project-item">
+                <img src="kenn.jpg" alt="Project 7">
+            </div>
+            <div class="project-item">
+                <img src="kenn.jpg" alt="Project 8">
+            </div>
+            <div class="project-item">
+                <img src="kenn.jpg" alt="Project 9">
+            </div>
+            <div class="project-item">
+                <img src="kenn.jpg" alt="Project 10">
+            </div>
+            <div class="project-item">
+                <img src="kenn.jpg" alt="Project 11">
+            </div>
+            <div class="project-item">
+                <img src="kenn.jpg" alt="Project 12">
+            </div>
+            <div class="project-item">
+                <img src="kenn.jpg" alt="Project 13">
+            </div>
+            <div class="project-item">
+                <img src="kenn.jpg" alt="Project 14">
+            </div>
+            <!-- Add more projects as needed -->
+        </div>
+    </div>
+     
+</body>
+</html>
+<script>
+    // Script to dynamically add floating squares and animate them
+    document.addEventListener('DOMContentLoaded', () => {
+        const animationContainer = document.querySelector('.bg-animation');
+    
+        // Function to create floating squares
+        function createSquares(numSquares) {
+            for (let i = 0; i < numSquares; i++) {
+                const square = document.createElement('div');
+                square.classList.add('square-bg');
+    
+                // Randomize size, position, and animation duration
+                const size = Math.random() * 30 + 10; // Size between 10px and 40px
+                square.style.width = `${size}px`;
+                square.style.height = `${size}px`;
+    
+                square.style.left = `${Math.random() * 100}%`; // Random position
+                square.style.animationDuration = `${Math.random() * 10 + 5}s`; // Duration between 5s and 15s
+                square.style.animationDelay = `${Math.random() * 5}s`; // Delay up to 5s
+    
+                animationContainer.appendChild(square);
+            }
+        }
+    
+        // Adjust number of squares based on screen size
+        const screenWidth = window.innerWidth;
+        let numSquares = screenWidth > 1200 ? 50 : screenWidth > 768 ? 30 : 15;
+    
+        createSquares(numSquares);
+    });
+
+     // JavaScript for handling multiple lightbox images dynamically
+     document.querySelectorAll('.project-gallery img').forEach(img => {
+        img.addEventListener('click', () => {
+            const lightbox = document.createElement('div');
+            lightbox.id = 'lightbox';
+            lightbox.style.position = 'fixed';
+            lightbox.style.top = 0;
+            lightbox.style.left = 0;
+            lightbox.style.width = '100%';
+            lightbox.style.height = '100%';
+            lightbox.style.background = 'rgba(0, 0, 0, 0.8)';
+            lightbox.style.display = 'flex';
+            lightbox.style.justifyContent = 'center';
+            lightbox.style.alignItems = 'center';
+            lightbox.style.zIndex = '1000';
+            lightbox.addEventListener('click', () => {
+                lightbox.remove();
+            });
+
+            const imgClone = document.createElement('img');
+            imgClone.src = img.src;
+            imgClone.style.maxWidth = '90%';
+            imgClone.style.maxHeight = '90%';
+            imgClone.style.border = '4px solid white';
+            imgClone.style.borderRadius = '8px';
+
+            lightbox.appendChild(imgClone);
+            document.body.appendChild(lightbox);
+        });
+    });
+    </script>

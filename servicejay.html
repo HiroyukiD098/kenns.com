@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+
+    <style>
+        /* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    background-color: black;
+    overflow-x: hidden;
+}
+
+/* Navigation Bar */
+nav {
+    background: rgba(50, 50, 50, 0.8);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    color: #d3d3d3;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #00bfff;
+}
+
+
+/* Services Container */
+.services-container {
+    text-align: center;
+    padding: 2rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Header */
+.services-container h1 {
+    font-size: 2.5rem;
+    color: #00bfff;
+    margin-bottom: 2rem;
+}
+
+/* Service Cards Container */
+.service-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    max-width: 1200px;
+}
+
+/* Individual Service Card */
+.service-card {
+    background: #1a1a1a;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    text-align: center;
+    padding: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #00bfff;
+}
+
+.service-card p {
+    font-size: 1rem;
+    color: #d3d3d3;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+/* Learn More Button */
+.learn-more {
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    color: white;
+    background-color: #00bfff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.learn-more:hover {
+    background-color: #007acc;
+}
+
+/* Details Section */
+.details {
+    display: none;
+    margin-top: 1rem;
+    color: #d3d3d3;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+
+/* Background Animation */
+@keyframes floatSquares {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(-100%);
+    }
+}
+
+.square-bg {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #bfbfbf;
+    animation: floatSquares 10s linear infinite;
+    opacity: 0.3;
+}
+
+.square-bg:nth-child(odd) {
+    background: #00bfff;
+    width: 30px;
+    height: 30px;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .service-card {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .service-card {
+        width: 100%;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="bg-animation"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="indexjay.html">Home</a>
+        <a href="aboutjay.html">About Me</a>
+        <a href="projectjay.html">Projects</a>
+        <a href="servicejay.html">Services</a>
+        <a href="contactjay.html">Contact Me</a>
+    </nav>
+
+    <!-- Services Section -->
+    <div class="services-container">
+        <h1>Our Services</h1>
+
+        <div class="service-cards">
+            <!-- Service Card 1 -->
+            <div class="service-card">
+                <h3>Wedding Photography</h3>
+                <p>Capture the magic of your wedding day with timeless photography.</p>
+                <button class="learn-more" onclick="toggleDetails(this)">Learn More</button>
+                <div class="details">
+                    <p>Our wedding photography captures the essence of your special day. From candid moments to posed shots, we ensure every detail is captured beautifully.</p>
+                </div>
+            </div>
+
+            <!-- Service Card 2 -->
+            <div class="service-card">
+                <h3>Event Coverage</h3>
+                <p>Professional photography for birthdays, corporate events, and more.</p>
+                <button class="learn-more" onclick="toggleDetails(this)">Learn More</button>
+                <div class="details">
+                    <p>We cover all types of events, ensuring that every important moment is photographed, from conferences to private parties.</p>
+                </div>
+            </div>
+
+            <!-- Service Card 3 -->
+            <div class="service-card">
+                <h3>Portrait Sessions</h3>
+                <p>High-quality portraits for individuals, families, and professionals.</p>
+                <button class="learn-more" onclick="toggleDetails(this)">Learn More</button>
+                <div class="details">
+                    <p>Our portrait sessions capture you in your best light, with professional lighting and personalized guidance throughout the shoot.</p>
+                </div>
+            </div>
+
+            <!-- Service Card 4 -->
+            <div class="service-card">
+                <h3>Product Photography</h3>
+                <p>Showcase your products with creative, professional photos.</p>
+                <button class="learn-more" onclick="toggleDetails(this)">Learn More</button>
+                <div class="details">
+                    <p>Our product photography services highlight your items in the best possible way, ensuring they stand out and attract customers.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+</html>
+<script>
+ // Script to dynamically add floating squares and animate them
+ document.addEventListener('DOMContentLoaded', () => {
+        const animationContainer = document.querySelector('.bg-animation');
+    
+        // Function to create floating squares
+        function createSquares(numSquares) {
+            for (let i = 0; i < numSquares; i++) {
+                const square = document.createElement('div');
+                square.classList.add('square-bg');
+    
+                // Randomize size, position, and animation duration
+                const size = Math.random() * 30 + 10; // Size between 10px and 40px
+                square.style.width = `${size}px`;
+                square.style.height = `${size}px`;
+    
+                square.style.left = `${Math.random() * 100}%`; // Random position
+                square.style.animationDuration = `${Math.random() * 10 + 5}s`; // Duration between 5s and 15s
+                square.style.animationDelay = `${Math.random() * 5}s`; // Delay up to 5s
+    
+                animationContainer.appendChild(square);
+            }
+        }
+    
+        // Adjust number of squares based on screen size
+        const screenWidth = window.innerWidth;
+        let numSquares = screenWidth > 1200 ? 50 : screenWidth > 768 ? 30 : 15;
+    
+        createSquares(numSquares);
+    });
+
+
+    function toggleDetails(button) {
+    const details = button.nextElementSibling;
+    if (details.style.display === "block") {
+        details.style.display = "none";
+        button.textContent = "Learn More";
+    } else {
+        details.style.display = "block";
+        button.textContent = "Show Less";
+    }
+}
+
+</script>

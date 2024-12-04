@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenny Jay Canares | Home</title>
+
+    <style>
+        /* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    background-color: black;
+    overflow-x: hidden;
+}
+
+/* Navigation Bar */
+nav {
+    background: rgba(50, 50, 50, 0.8);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    color: #d3d3d3;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #00bfff;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 1rem;
+}
+
+.container h1 {
+    font-size: 50px;
+}
+
+.container p {
+    font-size: 25px;
+    font-family: 'Courier New', Courier, monospace;
+}
+/* Background Animation */
+@keyframes floatSquares {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(-100%);
+    }
+}
+
+.square-bg {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #bfbfbf;
+    animation: floatSquares 10s linear infinite;
+    opacity: 0.3;
+}
+
+.square-bg:nth-child(odd) {
+    background: #00bfff;
+    width: 30px;
+    height: 30px;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+    .container {
+        padding: 0.5rem;
+    }
+}
+@media (max-width: 480px) {
+    .project-item {
+        width: 100%; /* Stack items vertically on small screens */
+        height: 150px;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="bg-animation"></div>
+    <nav>
+        <a href="indexjay.html">Home</a>
+        <a href="aboutjay.html">About Me</a>
+        <a href="projectjay.html">Projects</a>
+        <a href="servicejay.html">Services</a>
+        <a href="contactjay.html">Contact Me</a>
+    </nav>
+    <div class="container">
+        <br><br>
+        <h1>Welcome to <stong style="font-size: 67px; color:rgb(14, 82, 255); text-shadow: 0 0 15px #00f2ffb3;">Kenny Jay Canares'</stong> Portfolio</h1>
+        <br><br><br>
+        <p>Discover my work as a photographer through this digital gallery.</p>
+    </div>
+</body>
+</html>
+<script>
+// Script to dynamically add floating squares and animate them
+document.addEventListener('DOMContentLoaded', () => {
+    const animationContainer = document.querySelector('.bg-animation');
+
+    // Function to create floating squares
+    function createSquares(numSquares) {
+        for (let i = 0; i < numSquares; i++) {
+            const square = document.createElement('div');
+            square.classList.add('square-bg');
+
+            // Randomize size, position, and animation duration
+            const size = Math.random() * 30 + 10; // Size between 10px and 40px
+            square.style.width = `${size}px`;
+            square.style.height = `${size}px`;
+
+            square.style.left = `${Math.random() * 100}%`; // Random position
+            square.style.animationDuration = `${Math.random() * 10 + 5}s`; // Duration between 5s and 15s
+            square.style.animationDelay = `${Math.random() * 5}s`; // Delay up to 5s
+
+            animationContainer.appendChild(square);
+        }
+    }
+
+    // Adjust number of squares based on screen size
+    const screenWidth = window.innerWidth;
+    let numSquares = screenWidth > 1200 ? 50 : screenWidth > 768 ? 30 : 15;
+
+    createSquares(numSquares);
+});
+</script>
